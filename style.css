@@ -1,0 +1,55 @@
+/* Custom variables for Purnima's Portfolio */
+:root {
+  --navy-950  : #0a0f1e;
+  --navy-900  : #0f172a;
+  --navy-800  : #1e3a5f;
+  --accent    : #0ea5e9; /* Customized your accent color */
+  --accent-lt : #60a5fa;
+  --slate-600 : #475569;
+  --slate-400 : #94a3b8;
+  --slate-200 : #e2e8f0;
+  --white     : #f8fafc;
+  --font-display : 'Playfair Display', Georgia, serif;
+  --font-body    : 'DM Sans', 'Segoe UI', sans-serif;
+  --section-pad  : 6rem 1.5rem;
+  --radius-md    : 12px;
+  --radius-lg    : 20px;
+  --radius-pill  : 999px;
+  --shadow-card  : 0 4px 24px rgba(0,0,0,0.25);
+  --shadow-glow  : 0 0 32px rgba(14, 165, 233, 0.25);
+  --ease         : cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--navy-900); color: var(--white); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+ul { list-style: none; }
+
+/* Global Layout */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.section { padding: var(--section-pad); opacity: 0; transform: translateY(30px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.section.visible { opacity: 1; transform: translateY(0); }
+
+/* Logo Styling */
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.nav__logo span { color: var(--accent); }
+
+/* Rest of your CSS continues here... (Paste the buttons, hero, and about sections you have) */
