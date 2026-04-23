@@ -25,7 +25,8 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
-    <div class="nav__drawer" id="drawer">
+ 
+  <div class="nav__drawer" id="drawer">
     <a href="#about" class="drawer__link">About</a>
     <a href="#skills" class="drawer__link">Skills</a>
     <a href="#contact" class="drawer__link">Contact</a>
@@ -101,6 +102,7 @@
         </div>
       </div>
     </section>
+
     <section class="skills section" id="skills">
       <div class="container">
         <p class="section__label">Technical Skills</p>
@@ -215,6 +217,46 @@
       </div>
     </section>
 
-    </main>
-  </body>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by <strong>Purnima</strong> &nbsp;·&nbsp; BCA, Sagarmatha College &nbsp;·&nbsp; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+    const hamburger = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+    hamburger.addEventListener('click', () => {
+      drawer.classList.toggle('nav__drawer--open');
+      hamburger.classList.toggle('nav__hamburger--open');
+    });
+    document.querySelectorAll('.drawer__link').forEach(link => {
+      link.addEventListener('click', () => {
+        drawer.classList.remove('nav__drawer--open');
+        hamburger.classList.remove('nav__hamburger--open');
+      });
+    });
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const toast = document.getElementById('formToast');
+      toast.classList.add('form__toast--visible');
+      this.reset();
+      setTimeout(() => toast.classList.remove('form__toast--visible'), 4000);
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.section, .skill-card, .about__project').forEach(el => observer.observe(el));
+  </script>
+
+</body>
 </html>
