@@ -4,7 +4,7 @@
 **College:** Sagarmatha College of Science and Technology  
 **Program:** BCA — 4th Year  
 **Task:** Basic Level · Task 1 · Personal Portfolio Website  
-**Repo:** [synet-task1-portfolio-purnima](https://github.com/purnimm45/synet-task1-portfolio-purnima)
+**Repo:** https://github.com/purnimm45/synet-task1-portfolio-purnima
 
 ---
 
@@ -100,7 +100,7 @@ synet-task1-portfolio-purnima/
 
 1. Clone the repo:
 ```
-git clone https://github.com/purnimm45/synet-task1-portfolio-purnima.git
+git clone https://github.com/purnimm45/synet-task1-portfolio-purnima
 ```
 2. Open the folder and just double-click `index.html`
 
